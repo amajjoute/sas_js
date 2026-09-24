@@ -19,15 +19,16 @@ function binarySearch(arr, srch) {
 
 	while (high >= low) {
 		mid = low + Math.floor((high - low) / 2);
+		console.log(`mid : ${mid}`);
 
 		if (arr[mid] == srch) {
 			return (mid);
 		}
 
 		if (arr[mid] > srch) {
-			low = mid + 1;
-		} else {
 			high = mid - 1;
+		} else {
+			low = mid + 1;
 		}
 	}
 	return (-1);
@@ -37,12 +38,11 @@ let arr = [19, 12, 9, 66, 44, 20, 32, 4];
 let srch = 44;
 
 sort(arr);
-//console.log(arr);
 
 let result = binarySearch(arr, srch);
 
 if (result == -1) {
 	console.log("Votre nombre n'est pas trouver!")
 }else {
-	console.log(`Le nombre que vous cherche est dans le index : ${result}`);
+	console.log(`Le nombre que vous cherchez est dans le index : ${result}`);
 }
