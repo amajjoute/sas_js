@@ -11,5 +11,6 @@ function donnees(titre, auteur, anne) {
 }
 
 donnees("hello", "milas", 2002);
+console.log(livre)
 
 console.log(`Titre: ${livre.titre}, Auteur: ${livre.auteur}, Anne: ${livre.anne}`);
